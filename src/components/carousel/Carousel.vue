@@ -65,46 +65,48 @@ export default {
         this.currentSlide > 0
           ? this.currentSlide + step
           : this.slides.length - 1;
+      console.log("setting slide", this.currentSlide);
       this.setCurrentSlide(index);
       this.direction = "left";
-      this.startSlideTimer();
+      // this.startSlideTimer();
     },
     _next(step = 1) {
       const index =
         this.currentSlide < this.slides.length - 1
           ? this.currentSlide + step
           : 0;
+      console.log("setting slide", this.currentSlide);
       this.setCurrentSlide(index);
       this.direction = "right";
     },
     next(step = 1) {
       this._next(step);
-      this.startSlideTimer();
+      // this.startSlideTimer();
     },
-    startSlideTimer() {
-      this.stopSlideTimer();
-      this.slideInterval = setInterval(() => {
-        this._next();
-      }, this.interval);
-    },
-    stopSlideTimer() {
-      clearInterval(this.slideInterval);
-    },
-    switchSlide(index) {
-      const step = index - this.currentSlide;
-      if (step > 0) {
-        this.next(step);
-      } else {
-        this.prev(step);
-      }
-    },
+    // startSlideTimer() {
+    //   this.stopSlideTimer();
+    //   this.slideInterval = setInterval(() => {
+    //     this._next();
+    //   }, this.interval);
+    // },
+    // stopSlideTimer() {
+    //   clearInterval(this.slideInterval);
+    // },
+    // switchSlide(index) {
+    //   const step = index - this.currentSlide;
+    //   if (step > 0) {
+    //     this.next(step);
+    //   } else {
+    //     this.prev(step);
+    //   }
+    // },
   },
-  mounted() {
-    this.startSlideTimer();
-  },
-  beforeUnmount() {
-    this.stopSlideTimer();
-  },
+  // mounted() {
+  //   this.startSlideTimer();
+  // },
+  // beforeUnmount() {
+  //   this.stopSlideTimer();
+  // },
 };
 </script>
 

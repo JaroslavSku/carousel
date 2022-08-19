@@ -25,11 +25,18 @@ export default {
 
 <style scoped>
 .carousel-item {
-  position: absolute;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 0; */
+}
+.carousel-item img {
+  width: 100%;
 }
 .slide-in-enter-active,
 .slide-in-leave-active,

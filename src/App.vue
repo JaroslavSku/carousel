@@ -15,6 +15,9 @@ export default {
       "https://picsum.photos/id/1037/900/400",
       "https://picsum.photos/id/1035/900/400",
       "https://picsum.photos/id/1036/900/400",
+      "https://picsum.photos/id/1037/900/400",
+      "https://picsum.photos/id/1038/900/400",
+      "https://picsum.photos/id/1039/900/400",
     ],
   }),
 };
